@@ -1,3 +1,5 @@
+import Style from './ProductCard.module.css'
+
 type ProductCardProps = {
     nombre: string;
     descripcion: string;
@@ -6,15 +8,16 @@ type ProductCardProps = {
 }
 
 function ProductCard(props: ProductCardProps){
-    const { nombre, descripcion, src = 'https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg', precio } = props;
+    const { nombre, descripcion, src , precio } = props;
 
     return(
         <>
-            <article>
-                <img src={src}/>
-                <h2>{nombre}</h2>
-                <h4>{descripcion}</h4>
-                <h3>{precio}</h3>
+            <article className={Style.article}>
+                <img className={Style.img} src={src}/>
+                <h2 className={Style.title}>{nombre}</h2>
+                <h3 className={Style.precio}>$ {precio}</h3>
+                <h4 className={Style.descripcion}>{descripcion}</h4>
+                <a className={Style.boton} href="#"></a><button>Comprar</button>
             </article>
         </>
     )

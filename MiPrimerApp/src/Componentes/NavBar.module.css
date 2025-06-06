@@ -4,3 +4,40 @@
     height: 100%;
     background-color: yellow;
 }
+
+.header {
+    background-color: rgb(255, 231, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 85px;
+    padding: 5px 10%;
+}
+
+.header .navlinks li{
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.header .navlinks li:hover{
+    transform: scale(1.1);
+}
+
+.header .navlinks a{
+    text-decoration: none;
+    color: rgb(35, 47, 123);
+}
+
+.header .logo{
+  height: 5em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+  width: auto;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.header .logo:hover{
+    transform: scale(1.2);
+}

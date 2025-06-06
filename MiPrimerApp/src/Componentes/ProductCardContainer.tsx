@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import style from './ProductCardContainer.module.css'
 
 type ProductCardContainerProps = {
     NombreCategoria: string;
@@ -9,9 +10,9 @@ function ProductCardContainer(props: ProductCardContainerProps)  {
     const { NombreCategoria, children } = props;
 
     return(
-        <section>
+        <section className={style.container}>
             <h2>{NombreCategoria}</h2>
-            <div>{children}</div>
+            <div className={style.postContainer}>{children}</div>
         </section>
     )
 }
