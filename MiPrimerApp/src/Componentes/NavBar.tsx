@@ -1,12 +1,16 @@
 import style from './NavBar.module.css'
-import logo from'./mi_logo.png'
 
-function NavBar(){
+type NavBarProps = {
+    src: string;
+}
+
+function NavBar(props: NavBarProps){
+    const { src = 'https://www.shutterstock.com/image-vector/default-ui-image-placeholder-wireframes-600nw-1037719192.jpg' } = props;
     return(
         <>
             <header className={style.header}>
                 <div>
-                    <img className={style.logo} src={logo} alt="logo de la marca" />
+                    <img className={style.logo} src={src} alt="logo de la marca" />
                 </div>
                 <nav>
                     <ul className={style.navlinks}>
