@@ -12,6 +12,9 @@ function NavBar(props: NavBarProps){
                 <div>
                     <img className={style.logo} src={src} alt="logo de la marca" />
                 </div>
+                <div>
+                    <input type="text" name="buscador" id="buscador" placeholder='buscar...' />
+                </div>
                 <nav>
                     <ul className={style.navlinks}>
                         <li><a href="#">Categorías</a></li>
